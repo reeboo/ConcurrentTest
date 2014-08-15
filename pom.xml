@@ -10,12 +10,13 @@
     <properties>
         <com.alibaba.fastjson.version>1.1.35</com.alibaba.fastjson.version>
         <junit.version>4.6</junit.version>
+        <com.googlecode.jmockit.version>0.999.16</com.googlecode.jmockit.version>
     </properties>
 
     <repositories>
         <repository>
-            <id>QunarNexus</id>
-            <url>http://svn.corp.qunar.com:8081/nexus/content/groups/public</url>
+            <id>mavenReps</id>
+            <url>http://repository.jboss.com/maven2</url>
         </repository>
     </repositories>
 
@@ -27,25 +28,6 @@
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
             <version>${com.alibaba.fastjson.version}</version>
-        </dependency>
-        <!--==================================== -->
-        <!-- 测试 依赖包 -->
-        <!--==================================== -->
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.googlecode.jmockit</groupId>
-            <artifactId>jmockit</artifactId>
-            <version>${com.googlecode.jmockit.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-test</artifactId>
-            <scope>test</scope>
         </dependency>
     </dependencies>
 

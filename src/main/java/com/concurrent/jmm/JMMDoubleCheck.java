@@ -9,6 +9,13 @@ package com.concurrent.jmm;
  */
 public class JMMDoubleCheck {
     private volatile static JMMDoubleCheck sigletonInstance;
+    private CacheValue cacheValue;
+
+    public JMMDoubleCheck() {
+        CacheValue cacheValue1 = new CacheValue();
+        cacheValue1.setAge(1);
+        cacheValue1.setName("lucy");
+    }
 
     /**
      * 获取单例实例
@@ -24,6 +31,14 @@ public class JMMDoubleCheck {
             }
         }
         return sigletonInstance;
+    }
+
+    public CacheValue getCacheValue() {
+        return cacheValue;
+    }
+
+    public void setCacheValue(CacheValue cacheValue) {
+        this.cacheValue = cacheValue;
     }
 
     public static class CacheValue {

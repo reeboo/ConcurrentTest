@@ -1,10 +1,7 @@
 package com.concurrent.threadPool;
 
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
 
-import java.lang.reflect.ParameterizedType;
 import java.nio.file.*;
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.RecursiveTask;

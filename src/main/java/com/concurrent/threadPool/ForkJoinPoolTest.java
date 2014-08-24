@@ -1,9 +1,11 @@
 package com.concurrent.threadPool;
 
-import java.io.File;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+
+import java.lang.reflect.ParameterizedType;
 import java.nio.file.*;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.RecursiveTask;
 
@@ -17,11 +19,14 @@ import java.util.concurrent.RecursiveTask;
 public class ForkJoinPoolTest extends RecursiveTask<Integer> {
     private Path dir;
 
-    public ForkJoinPoolTest(Path dir) {
+    public ForkJoinPoolTest(){}
+
+    ForkJoinPoolTest(Path dir) {
         this.dir = dir;
     }
 
-    public static void main(String args[]) {
+    @Test
+    public void testAll() {
         Integer count = new ForkJoinPool().invoke(new ForkJoinPoolTest(Paths.get("/usr")));
         System.out.println(count);
     }

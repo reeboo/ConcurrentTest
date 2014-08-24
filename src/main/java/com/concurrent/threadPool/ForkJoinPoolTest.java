@@ -19,7 +19,8 @@ import java.util.concurrent.RecursiveTask;
 public class ForkJoinPoolTest extends RecursiveTask<Integer> {
     private Path dir;
 
-    public ForkJoinPoolTest(){}
+    public ForkJoinPoolTest() {
+    }
 
     ForkJoinPoolTest(Path dir) {
         this.dir = dir;
@@ -37,12 +38,12 @@ public class ForkJoinPoolTest extends RecursiveTask<Integer> {
         try {
             DirectoryStream<Path> ds = Files.newDirectoryStream(dir);
             for (Path subPath : ds) {
-                if (Files.isDirectory(subPath, LinkOption.NOFOLLOW_LINKS)) {
+                if (!Files.isDirectory(subPath, LinkOption.NOFOLLOW_LINKS)) {
+                    count++;
+                } else {
                     ForkJoinPoolTest subTask = new ForkJoinPoolTest(subPath);
                     subTask.fork();
                     count += subTask.join();
-                } else {
-                    count++;
                 }
             }
         } catch (Exception ex) {

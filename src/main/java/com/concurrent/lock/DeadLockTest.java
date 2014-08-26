@@ -114,7 +114,7 @@ public class DeadLockTest {
     }
 
 
-    public static class Cell {
+    public class Cell {
         private long value;
 
         public Cell(long value) {

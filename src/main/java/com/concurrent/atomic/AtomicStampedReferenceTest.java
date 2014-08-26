@@ -39,7 +39,7 @@ public class AtomicStampedReferenceTest {
             public void run() {
                 int stamp = ATOMIC_REFERENCE.getStamp();
                 while (!ATOMIC_REFERENCE.compareAndSet("abc2", "abc", stamp, stamp + 1)) ;
-                    System.out.println("已经改回为原始值！");
+                System.out.println("已经改回为原始值！");
             }
         }.start();
     }

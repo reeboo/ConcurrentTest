@@ -54,6 +54,9 @@ public class ListenableExecutor {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+
+        // 关闭容器
+        service.shutdown();
     }
 
     /**

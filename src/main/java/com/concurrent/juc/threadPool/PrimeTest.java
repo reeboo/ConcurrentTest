@@ -1,4 +1,4 @@
-package com.concurrent.threadPool;
+package com.concurrent.juc.threadPool;
 
 import com.google.common.util.concurrent.ListeningExecutorService;
 import com.google.common.util.concurrent.MoreExecutors;

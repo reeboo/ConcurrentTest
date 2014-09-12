@@ -1,4 +1,4 @@
-package com.concurrent.cyclicberry;
+package com.concurrent.juc.cyclicberry;
 
 import org.junit.Test;
 

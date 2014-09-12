@@ -1,4 +1,4 @@
-package com.concurrent.future;
+package com.concurrent.juc.future;
 
 import org.junit.Test;
 

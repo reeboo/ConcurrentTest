@@ -1,4 +1,4 @@
-package com.concurrent.atomic;
+package com.concurrent.juc.atomic;
 
 import com.alibaba.fastjson.JSON;
 import org.junit.Test;

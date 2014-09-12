@@ -1,4 +1,4 @@
-package com.concurrent.jmm;
+package com.concurrent.juc.jmm;
 
 /**
  * 实现描述: SynchronizeTest

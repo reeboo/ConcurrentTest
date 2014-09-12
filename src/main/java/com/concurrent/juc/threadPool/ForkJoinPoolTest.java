@@ -1,4 +1,4 @@
-package com.concurrent.threadPool;
+package com.concurrent.juc.threadPool;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package com.concurrent.jmm;
+package com.concurrent.juc.jmm;
 
 import org.junit.Test;
 

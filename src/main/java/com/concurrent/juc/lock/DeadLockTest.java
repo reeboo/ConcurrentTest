@@ -1,4 +1,4 @@
-package com.concurrent.lock;
+package com.concurrent.juc.lock;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package com.concurrent.future;
+package com.concurrent.juc.future;
 
 import com.google.common.util.concurrent.*;
 import org.junit.Test;

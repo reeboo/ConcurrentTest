@@ -12,7 +12,7 @@ import java.util.concurrent.atomic.AtomicIntegerFieldUpdater;
  * @since: 2014-08-16 00:59
  */
 public class AtomicIntegerFieldUpdaterTest {
-    static class A {
+    static class TestClass {
         volatile int intValue = 100;
     }
 
@@ -32,11 +32,11 @@ public class AtomicIntegerFieldUpdaterTest {
      * @see AtomicIntegerFieldUpdater#getAndIncrement(Object)
      * @see AtomicIntegerFieldUpdater#getAndSet(Object, int)
      */
-    public final static AtomicIntegerFieldUpdater<A> ATOMIC_INTEGER_UPDATER = AtomicIntegerFieldUpdater.newUpdater(A.class, "intValue");
+    public final static AtomicIntegerFieldUpdater<TestClass> ATOMIC_INTEGER_UPDATER = AtomicIntegerFieldUpdater.newUpdater(TestClass.class, "intValue");
 
     @Test
     public void testALL() {
-        final A a = new A();
+        final TestClass a = new TestClass();
         for (int i = 0; i < 100; i++) {
             final int num = i;
             new Thread() {
